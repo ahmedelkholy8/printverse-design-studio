@@ -1,4 +1,3 @@
-
 import { Layout } from "@/components/Layout";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -6,7 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { CreditCard, Wallet, Bank, Package, InfoIcon, Shield } from "lucide-react";
+import { CreditCard, Wallet, Building, Package, Info, Shield } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { useNavigate } from "react-router-dom";
 
@@ -63,7 +62,7 @@ const PaymentPage = () => {
                       <span>محفظة إلكترونية</span>
                     </TabsTrigger>
                     <TabsTrigger value="bank" className="flex items-center gap-2">
-                      <Bank className="h-4 w-4" />
+                      <Building className="h-4 w-4" />
                       <span>تحويل بنكي</span>
                     </TabsTrigger>
                   </TabsList>
@@ -130,7 +129,7 @@ const PaymentPage = () => {
                       </div>
                       
                       <div className="flex items-center text-sm text-muted-foreground mt-4">
-                        <InfoIcon className="h-4 w-4 mr-2" />
+                        <Info className="h-4 w-4 mr-2" />
                         <span>سيتم تحويلك إلى صفحة المحفظة الإلكترونية لإتمام عملية الدفع</span>
                       </div>
                     </div>
@@ -157,7 +156,7 @@ const PaymentPage = () => {
                       </div>
                       
                       <div className="flex items-center text-sm text-amber-600 mt-4">
-                        <InfoIcon className="h-4 w-4 mr-2" />
+                        <Info className="h-4 w-4 mr-2" />
                         <span>سيتم تأكيد طلبك بعد التحقق من عملية التحويل. قد يستغرق ذلك 1-2 يوم عمل.</span>
                       </div>
                     </div>

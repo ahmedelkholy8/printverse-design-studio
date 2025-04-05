@@ -6,7 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { FileUpload, Printer3d, InfoIcon, PackageCheck, AlertTriangle } from "lucide-react";
+import { Upload, Printer, Info, PackageCheck, AlertTriangle } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const NewOrderPage = () => {
@@ -71,7 +71,7 @@ const NewOrderPage = () => {
           <div className="flex items-center max-w-3xl mx-auto">
             <div className={`flex items-center relative w-full mx-8 ${currentStep >= 1 ? "text-primary" : "text-muted-foreground"}`}>
               <div className={`rounded-full transition duration-500 ease-in-out h-12 w-12 py-3 border-2 ${currentStep >= 1 ? "border-primary bg-primary text-white" : "border-muted-foreground"} flex items-center justify-center`}>
-                <FileUpload size={18} />
+                <Upload size={18} />
               </div>
               <div className="absolute top-0 -ml-10 text-center mt-16 w-32 text-xs font-medium">
                 <div className="font-semibold">رفع النموذج</div>
@@ -83,7 +83,7 @@ const NewOrderPage = () => {
             
             <div className={`flex items-center relative w-full mx-8 ${currentStep >= 2 ? "text-primary" : "text-muted-foreground"}`}>
               <div className={`rounded-full transition duration-500 ease-in-out h-12 w-12 py-3 border-2 ${currentStep >= 2 ? "border-primary bg-primary text-white" : "border-muted-foreground"} flex items-center justify-center`}>
-                <Printer3d size={18} />
+                <Printer size={18} />
               </div>
               <div className="absolute top-0 -ml-10 text-center mt-16 w-32 text-xs font-medium">
                 <div className="font-semibold">المواصفات</div>
@@ -117,7 +117,7 @@ const NewOrderPage = () => {
                   </p>
                   
                   <div className="border-2 border-dashed border-muted rounded-lg p-10 mb-6 text-center">
-                    <FileUpload className="h-12 w-12 mx-auto mb-4 text-muted-foreground" />
+                    <Upload className="h-12 w-12 mx-auto mb-4 text-muted-foreground" />
                     <div className="mb-4">
                       <h3 className="text-lg font-medium mb-1">اسحب الملف هنا أو</h3>
                       <p className="text-sm text-muted-foreground">يجب أن لا يتجاوز حجم الملف 50MB</p>
@@ -126,7 +126,7 @@ const NewOrderPage = () => {
                   </div>
                   
                   <div className="bg-blue-50 text-blue-800 p-4 rounded-lg flex items-start">
-                    <InfoIcon className="h-5 w-5 mr-2 shrink-0 mt-0.5" />
+                    <Info className="h-5 w-5 mr-2 shrink-0 mt-0.5" />
                     <div>
                       <p className="text-sm font-medium">نصائح لرفع النماذج:</p>
                       <ul className="text-sm list-disc list-inside mt-1">
