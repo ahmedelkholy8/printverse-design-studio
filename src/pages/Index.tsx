@@ -1,9 +1,9 @@
-
 import { Layout } from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { ArrowRight, Upload, Settings, CreditCard, Truck, CheckCircle, Clock, Shield, PenTool } from "lucide-react";
+import { InteractiveCube } from "@/components/3D/InteractiveCube";
 
 const Index = () => {
   return (
@@ -37,11 +37,7 @@ const Index = () => {
             </div>
           </div>
           <div className="lg:w-1/2">
-            <img
-              src="https://placehold.co/600x400/0891B2/FFFFFF?text=3D+Printing&font=Poppins"
-              alt="3D Printing"
-              className="rounded-lg shadow-xl mx-auto hover-scale"
-            />
+            <InteractiveCube />
           </div>
         </div>
       </section>
