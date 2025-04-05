@@ -1,7 +1,7 @@
 
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { ChevronLeft, ChevronRight, Home, PackagePlus, Package, User, Users, Settings, HelpCircle, FileText, LogOut, BarChart2, MessageCircle, Archive, Tool } from "lucide-react";
+import { ChevronLeft, ChevronRight, Home, PackagePlus, Package, User, Users, Settings, HelpCircle, FileText, LogOut, BarChart2, MessageCircle, Archive, Wrench } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
@@ -36,7 +36,7 @@ const navItems: NavItem[] = [
   { title: "تحديث حالة الطلبات", href: "/supplier?tab=status", icon: FileText, role: ["supplier"] },
   
   // Partner routes
-  { title: "لوحة تحكم الشريك", href: "/partner", icon: Tool, role: ["partner"] },
+  { title: "لوحة تحكم الشريك", href: "/partner", icon: Wrench, role: ["partner"] },
   { title: "إدارة الطلبات", href: "/partner?tab=orders", icon: Package, role: ["partner"] },
   { title: "تحديث مراحل الإنتاج", href: "/partner?tab=production", icon: Settings, role: ["partner"] },
   { title: "تقارير الأداء", href: "/partner?tab=reports", icon: BarChart2, role: ["partner"] },
