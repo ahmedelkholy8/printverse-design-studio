@@ -9,6 +9,9 @@ import NotFound from "./pages/NotFound";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
 import DashboardPage from "./pages/DashboardPage";
+import AdminDashboardPage from "./pages/AdminDashboardPage";
+import SupplierDashboardPage from "./pages/SupplierDashboardPage";
+import PartnerDashboardPage from "./pages/PartnerDashboardPage";
 import NewOrderPage from "./pages/NewOrderPage";
 import PaymentPage from "./pages/PaymentPage";
 import OrderConfirmationPage from "./pages/OrderConfirmationPage";
@@ -29,6 +32,9 @@ const App = () => (
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/dashboard" element={<DashboardPage />} />
+          <Route path="/admin" element={<AdminDashboardPage />} />
+          <Route path="/supplier" element={<SupplierDashboardPage />} />
+          <Route path="/partner" element={<PartnerDashboardPage />} />
           <Route path="/new-order" element={<NewOrderPage />} />
           <Route path="/payment" element={<PaymentPage />} />
           <Route path="/order-confirmation" element={<OrderConfirmationPage />} />

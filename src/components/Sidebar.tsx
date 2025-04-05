@@ -1,7 +1,7 @@
 
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { ChevronLeft, ChevronRight, Home, PackagePlus, Package, User, Users, Settings, HelpCircle, FileText, LogOut } from "lucide-react";
+import { ChevronLeft, ChevronRight, Home, PackagePlus, Package, User, Users, Settings, HelpCircle, FileText, LogOut, BarChart2, MessageCircle, Archive, Tool } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
@@ -21,12 +21,27 @@ const navItems: NavItem[] = [
   { title: "طلب جديد", href: "/new-order", icon: PackagePlus, role: ["client"] },
   { title: "طلباتي", href: "/orders", icon: Package, role: ["client"] },
   { title: "حسابي", href: "/profile", icon: User, role: ["client", "admin", "supplier", "partner"] },
-  { title: "إدارة المستخدمين", href: "/users", icon: Users, role: ["admin"] },
-  { title: "إدارة الطلبات", href: "/admin-orders", icon: Package, role: ["admin"] },
-  { title: "إدارة المواد", href: "/materials", icon: FileText, role: ["supplier"] },
-  { title: "استقبال الطلبات", href: "/incoming-orders", icon: Package, role: ["supplier"] },
-  { title: "متابعة الإنتاج", href: "/production", icon: Settings, role: ["partner"] },
-  { title: "تقارير الإنتاج", href: "/reports", icon: FileText, role: ["partner"] },
+  
+  // Admin routes
+  { title: "لوحة تحكم المسؤول", href: "/admin", icon: Settings, role: ["admin"] },
+  { title: "إدارة المستخدمين", href: "/admin?tab=users", icon: Users, role: ["admin"] },
+  { title: "إدارة الطلبات", href: "/admin?tab=orders", icon: Package, role: ["admin"] },
+  { title: "التقارير", href: "/admin?tab=reports", icon: BarChart2, role: ["admin"] },
+  { title: "مركز الرسائل", href: "/admin?tab=messaging", icon: MessageCircle, role: ["admin"] },
+  
+  // Supplier routes
+  { title: "لوحة تحكم المورد", href: "/supplier", icon: Archive, role: ["supplier"] },
+  { title: "إدارة المواد", href: "/supplier?tab=materials", icon: Archive, role: ["supplier"] },
+  { title: "الطلبات الواردة", href: "/supplier?tab=orders", icon: Package, role: ["supplier"] },
+  { title: "تحديث حالة الطلبات", href: "/supplier?tab=status", icon: FileText, role: ["supplier"] },
+  
+  // Partner routes
+  { title: "لوحة تحكم الشريك", href: "/partner", icon: Tool, role: ["partner"] },
+  { title: "إدارة الطلبات", href: "/partner?tab=orders", icon: Package, role: ["partner"] },
+  { title: "تحديث مراحل الإنتاج", href: "/partner?tab=production", icon: Settings, role: ["partner"] },
+  { title: "تقارير الأداء", href: "/partner?tab=reports", icon: BarChart2, role: ["partner"] },
+  
+  // Common routes
   { title: "الدعم", href: "/support", icon: HelpCircle, role: ["client", "admin", "supplier", "partner"] },
 ];
 
