@@ -38,7 +38,7 @@ function Cube(props: any) {
 // Main component with canvas
 export function InteractiveCube() {
   return (
-    <div className="w-full h-[400px] rounded-lg shadow-xl overflow-hidden">
+    <div className="w-full h-[400px] rounded-lg overflow-hidden">
       <Canvas dpr={[1, 2]} camera={{ position: [0, 0, 5], fov: 45 }}>
         <ambientLight intensity={0.5} />
         <spotLight 
@@ -51,8 +51,8 @@ export function InteractiveCube() {
         <pointLight position={[-10, -10, -10]} intensity={1} />
         <Cube position={[0, 0, 0]} />
         <OrbitControls 
-          enableZoom={false}
-          autoRotate={false}
+          enableZoom={true}
+          autoRotate={true}
           autoRotateSpeed={1}
         />
       </Canvas>
